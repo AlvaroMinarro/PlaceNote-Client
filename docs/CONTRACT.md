@@ -84,3 +84,12 @@ Mientras no haya generación automática en CI, los modelos `kotlinx.serializati
 
 - `@SerialName` donde el JSON use `snake_case` (p. ej. `user_id` en cuerpos de amistad).
 - DTOs de envoltorio con `status` + `data` para respuestas bajo `/api/v1/`, y `status` + `message` + `code` para errores.
+
+## Implementación en `:shared` (referencia)
+
+El módulo `shared` incluye utilidades y un cliente mínimo sobre Ktor:
+
+- `com.placenote.client.api`: `defaultApiJson`, `decodeSuccessData`, `parseSuccessEnvelope`, `ApiException`.
+- `com.placenote.client.api.PlaceNoteApiClient`: `getHealth()` (sin envoltorio) y `getUsersMe(token)` (envoltorio `success`).
+
+Amplía DTOs y métodos según el OpenAPI a medida que integres pantallas o el bot.

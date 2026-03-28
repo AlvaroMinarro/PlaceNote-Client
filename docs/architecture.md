@@ -10,7 +10,7 @@ La extracción de datos de tickets se hace **en el dispositivo** (ML Kit en Andr
 
 ## Módulo `shared`
 
-Contiene lógica y modelos comunes. La capa de red (cliente Ktor u otro) consumirá los mismos DTOs que describe el OpenAPI del servidor; ver [CONTRACT.md](CONTRACT.md).
+Contiene lógica, modelos y una capa HTTP inicial (`com.placenote.client.api`, Ktor) que parsea envoltorios; ampliar DTOs y llamadas según pantallas. La red consumirá los mismos DTOs que describe el OpenAPI del servidor; ver [CONTRACT.md](CONTRACT.md).
 
 ## Próximos pasos previstos
 

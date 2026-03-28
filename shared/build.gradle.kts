@@ -6,6 +6,8 @@ plugins {
     id("com.android.library") version "8.5.2"
 }
 
+val ktorVersion = "3.0.3"
+
 kotlin {
     androidTarget {
         compilerOptions {
@@ -17,9 +19,18 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
+            implementation("io.ktor:ktor-client-core:$ktorVersion")
+            implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+            implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
         }
         commonTest.dependencies {
             implementation(kotlin("test"))
+        }
+        jvmMain.dependencies {
+            implementation("io.ktor:ktor-client-cio:$ktorVersion")
+        }
+        androidMain.dependencies {
+            implementation("io.ktor:ktor-client-cio:$ktorVersion")
         }
     }
 }

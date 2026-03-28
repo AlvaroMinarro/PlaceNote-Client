@@ -15,7 +15,7 @@ El documento [docs/CONTRACT.md](docs/CONTRACT.md) resume además los **envoltori
 
 ## Estructura
 
-- **`shared`**: código multiplataforma compartido (modelos, lógica, futura capa de red). Incluye targets **Android** y **JVM**; el target **iOS** se puede añadir de nuevo (p. ej. `iosArm64` / `iosSimulatorArm64`) cuando el entorno Xcode/Kotlin Native esté verificado en tu máquina.
+- **`shared`**: código multiplataforma compartido (modelos, capa HTTP mínima en `com.placenote.client.api`, lógica). Incluye targets **Android** y **JVM**; el target **iOS** se puede añadir de nuevo (p. ej. `iosArm64` / `iosSimulatorArm64`) cuando el entorno Xcode/Kotlin Native esté verificado en tu máquina.
 - Módulos adicionales (por ejemplo `composeApp`) se pueden añadir cuando se integre Compose Multiplatform.
 
 ## Requisitos de desarrollo
