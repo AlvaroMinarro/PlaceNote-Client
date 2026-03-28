@@ -11,7 +11,7 @@ La fuente de verdad del contrato HTTP es el archivo OpenAPI del servidor:
 
 `PlaceNote-Server/docs/api/openapi.yaml`
 
-Instrucciones para generar o sincronizar modelos en el cliente: [docs/CONTRACT.md](docs/CONTRACT.md).
+El documento [docs/CONTRACT.md](docs/CONTRACT.md) resume además los **envoltorios** de respuesta (`success`/`error`), rutas canónicas frente a deprecadas y la cabecera JWT, además de la generación opcional de modelos.
 
 ## Estructura
 
