@@ -33,6 +33,14 @@ El documento [docs/CONTRACT.md](docs/CONTRACT.md) resume además los **envoltori
 
 Sin Android SDK configurado, `compileDebugKotlinAndroid` fallará hasta definir `ANDROID_HOME` / Android Studio.
 
+Tests JVM del módulo (sin Android SDK):
+
+```bash
+./gradlew :shared:jvmTest
+```
+
+En CI (GitHub Actions), cada push/PR a `main` ejecuta `:shared:jvmTest`.
+
 ## Documentación
 
 - [Arquitectura del cliente (offline-first)](docs/architecture.md)

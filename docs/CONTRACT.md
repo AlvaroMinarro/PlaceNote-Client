@@ -87,9 +87,9 @@ Mientras no haya generación automática en CI, los modelos `kotlinx.serializati
 
 ## Implementación en `:shared` (referencia)
 
-El módulo `shared` incluye utilidades y un cliente mínimo sobre Ktor:
+El módulo `shared` incluye utilidades y un cliente Ktor en `com.placenote.client.api`:
 
-- `com.placenote.client.api`: `defaultApiJson`, `decodeSuccessData`, `parseSuccessEnvelope`, `ApiException`.
-- `com.placenote.client.api.PlaceNoteApiClient`: `getHealth()` (sin envoltorio) y `getUsersMe(token)` (envoltorio `success`).
+- **Parsing:** `defaultApiJson`, `decodeSuccessData`, `parseSuccessEnvelope`, `ApiException`.
+- **`PlaceNoteApiClient`** (`shared/.../PlaceNoteApiClient.kt`): `getHealth()` (sin envoltorio); `register` / `login`; `getUsersMe`; `listReviews` / `getReview` / `createReview` (JWT en `Authorization: Bearer`).
 
-Amplía DTOs y métodos según el OpenAPI a medida que integres pantallas o el bot.
+Amplía DTOs y métodos según el OpenAPI (ratings, friends, sync, etc.) cuando integres pantallas o el bot.
